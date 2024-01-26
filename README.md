@@ -1,4 +1,4 @@
-# DJ-Drunkle
+# DJ-Drunkel
 A handy bot to create a pair of community playlists, one on YouTube and another on Spotify
 
 - YouTube Playlist: https://urlis.net/eapsi8cb
