@@ -5,8 +5,6 @@ import re
 import requests
 import datetime
 import json
-from spotipy.oauth2 import SpotifyOAuth
-import spotipy.util as util
 
 auth_url = 'https://accounts.spotify.com/authorize'
 token_url = 'https://accounts.spotify.com/api/token'

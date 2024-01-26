@@ -5,6 +5,7 @@ import youtube
 import spotify
 # Dep imports
 import discord
+from discord.utils import get
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -34,12 +35,15 @@ async def on_message(message):
         if check == None:
             return
         elif check[0] == "yt":
-            await youtube.add_to_playlist(check[1])
-            await message.add_reaction('👍')
+            run = await youtube.add_to_playlist(check[1])
+            if run:
+                await message.add_reaction('<:YouTube:1200572694064808078>')
+            else:
+                await message.add_reaction('👎')
         elif check[0] == "sp":
             run = await spotify.add_to_playlist(check[1])
             if run:
-                await message.add_reaction('👍')
+                await message.add_reaction("<:Spotify:1200572693104316436>")
             else:
                 await message.add_reaction('👎')
 

@@ -101,8 +101,11 @@ async def add_to_playlist(videoURL):
         utils.logPrint(add_video_response['snippet']['title'], 0)
     except googleapiclient.errors.HttpError as e:
             print(e)
+            return False
     except:
         utils.logPrint(sys.exc_info()[0], 2)
+        return False
+    return True
 
 async def get_playlist_len():
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
