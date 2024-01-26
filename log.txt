@@ -1,0 +1,114 @@
+[ log      ][ 2024-01-25 18:34:54.208492 ]: Adding DY5WMBffRT0 to playlist 
+[ log      ][ 2024-01-25 18:35:06.494045 ]: Adding DY5WMBffRT0 to playlist 
+[ log      ][ 2024-01-25 18:35:21.381149 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 18:47:37.848193 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 18:47:37.849250 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 18:49:01.164276 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 18:49:01.164495 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 18:50:41.204262 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 18:50:41.204647 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 19:31:31.534735 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:31:31.677823 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:31:58.287064 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:31:58.429880 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:32:12.587602 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:32:12.712561 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:32:50.709745 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:32:50.710496 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:34:20.652901 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:35:08.973474 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:35:09.123791 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:36:17.426022 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:36:17.555186 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:37:08.319030 ]: Authenticating Spotify service access 
+[ moderate ][ 2024-01-25 19:37:08.458309 ]: {"error":"invalid_client"} 
+[ log      ][ 2024-01-25 19:37:08.465765 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:43:29.687486 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:43:50.549121 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:43:50.898536 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:44:45.656271 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:44:46.014351 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:45:51.159099 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:45:51.459309 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:50:33.120238 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:51:09.486455 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:51:09.606273 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:54:52.079049 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 19:54:52.080344 ]: Authenticating Spotify service access 
+[ log      ][ 2024-01-25 19:59:07.974042 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:04:50.802145 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:09:00.980818 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:09:46.600890 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:11:06.743132 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:11:44.715396 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:19:14.335851 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:22:00.333900 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:24:47.347002 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:26:31.879369 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:29:24.235587 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:33:03.262605 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:35:18.905088 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:35:59.220133 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:36:26.895775 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:36:54.587785 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:40:07.636154 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:49:36.500501 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:52:56.503432 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:56:21.140011 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:57:11.150637 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:57:43.634517 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 20:58:42.691972 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:00:55.540162 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:01:39.681416 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 21:01:39.681700 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 21:06:17.479787 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 21:06:17.479984 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 21:06:59.564720 ]: Adding T4l33dsNwVk to playlist 
+[ log      ][ 2024-01-25 21:06:59.564891 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 21:07:00.618185 ]: Beautiful Things 
+[ log      ][ 2024-01-25 21:14:51.927934 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:15:19.839387 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:18:33.707386 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:18:58.985610 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:27:34.485136 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:28:22.111690 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:38:34.001263 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:39:45.632847 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:41:16.353835 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:42:12.022912 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:43:19.469872 ]: Adding 1t4QF1JdZ4NoBKpZpRgpwa to playlist 
+[ log      ][ 2024-01-25 21:45:53.540187 ]: Adding 1t4QF1JdZ4NoBKpZpRgpwa to playlist 
+[ log      ][ 2024-01-25 21:46:18.132194 ]: Adding 1t4QFakeURLTest to playlist 
+[ log      ][ 2024-01-25 21:51:12.463222 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:51:53.025139 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:52:28.738692 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:52:45.118401 ]: Adding 0QWjl7fUTh1jc3d70IAODd to playlist 
+[ log      ][ 2024-01-25 21:52:55.192556 ]: Adding 1t4QFakeURLTest to playlist 
+[ log      ][ 2024-01-25 21:59:37.655915 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 21:59:38.098670 ]: <class 'TypeError'> 
+[ log      ][ 2024-01-25 22:00:52.427051 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:00:53.052448 ]: <class 'TypeError'> 
+[ log      ][ 2024-01-25 22:02:43.194710 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:03:46.753554 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:03:47.303866 ]: <class 'TypeError'> 
+[ log      ][ 2024-01-25 22:05:17.246080 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:05:17.978257 ]: <class 'KeyError'> 
+[ log      ][ 2024-01-25 22:06:57.798080 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:08:41.015133 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:09:16.468441 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:10:40.393513 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:10:41.240481 ]: <class 'AttributeError'> 
+[ log      ][ 2024-01-25 22:11:02.101486 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:11:02.768706 ]: <class 'AttributeError'> 
+[ log      ][ 2024-01-25 22:11:29.161032 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:11:29.862107 ]: <class 'AttributeError'> 
+[ log      ][ 2024-01-25 22:12:06.455437 ]: Authenticating YouTube service access and refresh token 
+[ moderate ][ 2024-01-25 22:12:07.162414 ]: <class 'AttributeError'> 
+[ log      ][ 2024-01-25 22:13:09.715898 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:16:51.902341 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:17:02.010666 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:17:49.090542 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:18:18.539213 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:18:44.285456 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:19:26.681874 ]: Authenticating YouTube service access and refresh token 
+[ log      ][ 2024-01-25 22:19:53.468256 ]: Authenticating YouTube service access and refresh token 

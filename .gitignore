@@ -1,3 +1,9 @@
+# DJ Drunkel specific files
+auth.json
+youtubeauth.json
+refresh.token
+spotify.token
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
