@@ -32,19 +32,16 @@ async def on_message(message):
         await message.channel.send('pong!')
     elif content.startswith('>add'):
         check = utils.isURL(content)
+        print(check)
         if check == None:
             return
         elif check[0] == "yt":
-            run = await youtube.add_to_playlist(check[1])
-            if run:
-                await message.add_reaction('<:YouTube:1200572694064808078>')
-            else:
-                await message.add_reaction('👎')
+            ytRun = await youtube.add_to_playlist(check[1], True)
+            for i in range(len(ytRun)):
+                await message.add_reaction(ytRun[i])
         elif check[0] == "sp":
-            run = await spotify.add_to_playlist(check[1])
-            if run:
-                await message.add_reaction("<:Spotify:1200572693104316436>")
-            else:
-                await message.add_reaction('👎')
+            spRun = await spotify.add_to_playlist(check[1], True)
+            for i in range(len(spRun)):
+                await message.add_reaction(spRun[i])
 
 client.run(utils.readAuth("discord")["token"])

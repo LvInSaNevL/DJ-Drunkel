@@ -1,9 +1,11 @@
 # File imports
 import utils
+import youtube
 # Dep imports
 import re
 import requests
-import datetime
+import datetime 
+import urllib
 import json
 
 auth_url = 'https://accounts.spotify.com/authorize'
@@ -38,7 +40,8 @@ def get_authenticated_service():
         # Handle errors
         print(f"Error: {response.status_code}, {response.text}")
 
-async def add_to_playlist(videoURL):
+async def add_to_playlist(videoURL, search=False):
+    reactList = []
     regex = "(?:https:\/\/open.spotify.com\/track\/|spotify:track:)([a-zA-Z0-9]+)"
     result = re.search(regex, videoURL)
     videoID = result.group(1)
@@ -59,10 +62,15 @@ async def add_to_playlist(videoURL):
     print(response.status_code)
     if response.status_code == 201:
         print(response.json())
-        return True
+        songInfo = get_song_info(videoID)
+        if search:
+            reactList.append(youtube.search(songInfo[0], songInfo[1]))
+        reactList.append("<:Spotify:1200572693104316436>")
     else:
         print(response.json())
-        return False
+        reactList.append('👎')
+
+    return reactList
     
 async def get_playlist_len():
     url = 'https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/tracks?fields=total'
@@ -72,3 +80,42 @@ async def get_playlist_len():
     
     response = requests.get(url, headers=headers)
     return response.json()['total']
+
+def get_song_info(videoID):
+    url = f"https://api.spotify.com/v1/tracks/{videoID}"
+    headers = {
+        'Authorization': 'Bearer {}'.format(get_authenticated_service())
+    }
+    response = requests.get(url, headers=headers)
+    data = response.json()['album']
+    songInfo = (data['name'], data['artists'][0]['name'])
+    return songInfo
+
+async def search(title, artist):
+    url = 'https://api.spotify.com/v1/search'
+    fmtArtist = artist.replace(" - Topic", "")
+    query = urllib.parse.quote(f"track:{title} artist:{fmtArtist}")
+    params = {
+        'q': query,
+        'type': 'track',
+        'market': 'US',
+        'limit': 5,
+        'offset': 0
+    }
+    headers = {
+        'Authorization': 'Bearer {}'.format(get_authenticated_service()),
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    data = response.json()['tracks']['items']
+
+    for t in range(len(data)):
+        songName = data[t]['name']
+        artistName = data[t]['artists'][0]['name']
+        if (title == songName) and (fmtArtist == artistName):
+            add = await add_to_playlist(data[t]['external_urls']['spotify'], False)
+            if add[0] == "<:Spotify:1200572693104316436>":
+                return "<:Spotify:1200572693104316436>"
+            else:
+                return None
+            break

@@ -1,10 +1,12 @@
+import utils
+import spotify
+
 import sys
 from pydoc import cli
 import datetime
 import re
 from urllib.parse import urlparse
 import os
-import utils
 import requests
 
 import google.auth.exceptions
@@ -75,7 +77,8 @@ def get_authenticated_service(lastAuth):
 # Adds a new video to the playlist
 # <param name=videoID> The YouTube video ID, usually provided by URL
 ### </summary
-async def add_to_playlist(videoURL):
+async def add_to_playlist(videoURL, search=False):
+    reactList = []
     regex = "((?<=(v|V)/)|(?<=be/)|(?<=(\?|\&)v=)|(?<=embed/))([\w-]+)"
     result = re.search(regex, videoURL)
     videoID = result.group()
@@ -99,13 +102,21 @@ async def add_to_playlist(videoURL):
             )
         ).execute()
         utils.logPrint(add_video_response['snippet']['title'], 0)
+        if search:
+            spAdd = await spotify.search(add_video_response['snippet']['title'], add_video_response['snippet']['videoOwnerChannelTitle'])
+            if spAdd is not None:
+                reactList.append(spAdd)
     except googleapiclient.errors.HttpError as e:
-            print(e)
-            return False
+        print(e)
+        reactList.append('👎')
+        return reactList
     except:
         utils.logPrint(sys.exc_info()[0], 2)
-        return False
-    return True
+        reactList.append('👎')
+        return reactList
+    reactList.append('<:YouTube:1200572694064808078>')
+    
+    return reactList
 
 async def get_playlist_len():
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -123,3 +134,7 @@ async def get_playlist_len():
             print(e)
     except:
         utils.logPrint(sys.exc_info()[0], 2)
+
+def search(title, artist):
+    print(title)
+    return "<:YouTube:1200572694064808078>"
