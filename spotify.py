@@ -63,8 +63,8 @@ async def add_to_playlist(videoURL, search=False):
     if response.status_code == 201:
         print(response.json())
         songInfo = get_song_info(videoID)
-        if search:
-            reactList.append(youtube.search(songInfo[0], songInfo[1]))
+        # if search:
+        #     reactList.append(youtube.search(songInfo[0], songInfo[1]))
         reactList.append("<:Spotify:1200572693104316436>")
     else:
         print(response.json())

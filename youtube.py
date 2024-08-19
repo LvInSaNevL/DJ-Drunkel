@@ -102,10 +102,10 @@ async def add_to_playlist(videoURL, search=False):
             )
         ).execute()
         utils.logPrint(add_video_response['snippet']['title'], 0)
-        if search:
-            spAdd = await spotify.search(add_video_response['snippet']['title'], add_video_response['snippet']['videoOwnerChannelTitle'])
-            if spAdd is not None:
-                reactList.append(spAdd)
+        # if search:
+        #     spAdd = await spotify.search(add_video_response['snippet']['title'], add_video_response['snippet']['videoOwnerChannelTitle'])
+        #     if spAdd is not None:
+        #         reactList.append(spAdd)
     except googleapiclient.errors.HttpError as e:
         print(e)
         reactList.append('👎')
