@@ -21,7 +21,7 @@ import googleapiclient.errors
 # Variables and such
 scopes = ["https://www.googleapis.com/auth/youtube.force-ssl",
           "https://www.googleapis.com/auth/youtube.readonly"]
-playlist = "PLRDuNIkwpnsfJaOX5Bq3jrPtP2WfP_vBl"
+playlist = "PLRDuNIkwpnsdsAaytTIOtkaQGcsdy_fJH"
 lastAuth = datetime.datetime.min       
 
 def get_authenticated_service(lastAuth):
