@@ -7,6 +7,7 @@ import requests
 import datetime 
 import urllib
 import json
+from thefuzz import fuzz
 
 auth_url = 'https://accounts.spotify.com/authorize'
 token_url = 'https://accounts.spotify.com/api/token'
@@ -81,7 +82,7 @@ async def get_playlist_len():
     response = requests.get(url, headers=headers)
     return response.json()['total']
 
-def get_song_info(videoID):
+async def get_song_info(videoID):
     url = f"https://api.spotify.com/v1/tracks/{videoID}"
     headers = {
         'Authorization': 'Bearer {}'.format(get_authenticated_service())
@@ -93,13 +94,11 @@ def get_song_info(videoID):
 
 async def search(title, artist):
     url = 'https://api.spotify.com/v1/search'
-    fmtArtist = artist.replace(" - Topic", "")
-    query = urllib.parse.quote(f"track:{title} artist:{fmtArtist}")
+    query = urllib.parse.quote(f"track:{title} artist:{artist}")
     params = {
         'q': query,
         'type': 'track',
-        'market': 'US',
-        'limit': 5,
+        'limit': 50,
         'offset': 0
     }
     headers = {
@@ -108,14 +107,27 @@ async def search(title, artist):
 
     response = requests.get(url, headers=headers, params=params)
     data = response.json()['tracks']['items']
+    maxMatch = {
+        "match": 0,
+        "data": []
+    }
 
     for t in range(len(data)):
         songName = data[t]['name']
         artistName = data[t]['artists'][0]['name']
-        if (title == songName) and (fmtArtist == artistName):
-            add = await add_to_playlist(data[t]['external_urls']['spotify'], False)
-            if add[0] == "<:Spotify:1200572693104316436>":
-                return "<:Spotify:1200572693104316436>"
-            else:
-                return None
-            break
+      
+        songRatio = fuzz.ratio(title, songName)
+        artistRatio = fuzz.ratio(artist, artistName)
+        # Allows us to bias towards the artist's name, its safer
+        totalRatio = (((songRatio * 0.65) + (artistRatio * 0.35)))
+
+        if (totalRatio > maxMatch['match']):
+            maxMatch['match'] = totalRatio
+            maxMatch['data'] = data[t]
+
+    if (maxMatch['match'] > 90):
+        add = await add_to_playlist(maxMatch['data']['external_urls']['spotify'], False)
+        if add[0] == "<:Spotify:1200572693104316436>":
+            return add[0]
+        else:
+            return None
