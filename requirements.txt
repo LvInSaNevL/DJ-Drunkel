@@ -6,3 +6,4 @@ google-auth-httplib2==0.0.3
 google-auth-oauthlib==0.4.1
 isodate==0.6.1
 requests==2.31.0
+thefuzz==0.22.1

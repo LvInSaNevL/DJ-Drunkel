@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 import os
 import requests
 import json
+import asyncio
 
 import google.auth.exceptions
 import google_auth_oauthlib
@@ -97,10 +98,10 @@ async def add_to_playlist(videoURL, search=False):
             )
         ).execute()
         utils.logPrint(add_video_response['snippet']['title'], 0)
-        # if search:
-        #     spAdd = await spotify.search(add_video_response['snippet']['title'], add_video_response['snippet']['videoOwnerChannelTitle'])
-        #     if spAdd is not None:
-        #         reactList.append(spAdd)
+        if search:
+            spAdd = await spotify.search(add_video_response['snippet']['title'], add_video_response['snippet']['videoOwnerChannelTitle'])
+            if spAdd is not None:
+                reactList.append(spAdd)
     except googleapiclient.errors.HttpError as e:
         print(e)
         reactList.append('👎')
@@ -112,6 +113,44 @@ async def add_to_playlist(videoURL, search=False):
     reactList.append('<:YouTube:1200572694064808078>')
     
     return reactList
+
+### <summary>
+# Recursively gets all playlist items
+### </summary>
+def get_playlist_items():
+    utils.logPrint("Clearing out yesterdays music", 0)
+
+    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+    youtube = get_authenticated_service(lastAuth)
+
+    # Makes the first round of API calls
+    request = youtube.playlistItems().list(
+        part="snippet,contentDetails",
+        maxResults=50,
+        playlistId=playlist
+    )
+
+    response = request.execute()
+    utils.logPrint(response, 0)
+
+    currentLen = response["pageInfo"]["totalResults"]
+    playlist_items = []    
+    for p in response['items']:
+        playlist_items.append(p)
+        
+    utils.logPrint("Getting previous days content", 0)
+    while len(playlist_items) < response["pageInfo"]['totalResults']:
+        request = youtube.playlistItems().list(
+            part="snippet,contentDetails",
+            maxResults=50,
+            playlistId=playlist,
+            pageToken=response["nextPageToken"]
+        )        
+        response = request.execute()
+        for p in response['items']:
+            playlist_items.append(p)
+    utils.logPrint(playlist_items, 0)
+    return playlist_items
 
 async def get_playlist_len():
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -130,6 +169,17 @@ async def get_playlist_len():
     except:
         utils.logPrint(sys.exc_info()[0], 2)
 
-def search(title, artist):
-    print(title)
-    return "<:YouTube:1200572694064808078>"
+async def search(title, artist):
+    songFilters = ["(Official Music Video)",
+            "(Lyric Video)",
+            "(Official Video)"]
+    for sF in songFilters:
+        yt_title = yt_title.replace(sF, "")
+    artistFilters = [" - Topic",
+                        "(Official)",
+                        "VEVO"]
+    for aF in artistFilters:
+        yt_artist = yt_artist.replace(aF, "")
+
+    loop = asyncio.get_event_loop()
+    loop.create_task(spotify.search(yt_title, yt_artist))
